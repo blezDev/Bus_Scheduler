@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/black"
-        tools:context=".presentation.register.RegisterActivity">
+        tools:context=".presentation.entry.EntryActivity">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,32 +29,13 @@
                 android:layout_marginTop="40dp"
 
                 android:gravity="center_horizontal"
-                android:text="Registration"
+                android:text="Enter Data"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:gravity="center_horizontal"
-                android:text="Page"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-
-                android:gravity="center"
-                android:text="@string/app_name"
-                android:textColor="@color/white"
-                android:textSize="30sp" />
 
             <EditText
-                android:id="@+id/etName"
+                android:id="@+id/etBusNumber"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
@@ -63,13 +44,13 @@
                 android:background="@drawable/input_border"
                 android:textColor="@color/white"
                 android:ems="10"
-                android:hint="Name"
-                android:inputType="textPersonName"
+                android:hint="Bus Number"
+                android:inputType="number"
                 android:paddingLeft="20dp"
                 android:textColorHint="@color/white" />
 
             <EditText
-                android:id="@+id/etRollnumber"
+                android:id="@+id/etAt"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
@@ -78,13 +59,13 @@
                 android:textColor="@color/white"
                 android:background="@drawable/input_border"
                 android:ems="10"
-                android:hint="Roll No"
+                android:hint="AT or Destination"
                 android:inputType="textPersonName"
                 android:paddingLeft="20dp"
                 android:textColorHint="@color/white" />
 
             <EditText
-                android:id="@+id/etEmail"
+                android:id="@+id/etArrival"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
@@ -93,13 +74,13 @@
                 android:layout_marginRight="40dp"
                 android:background="@drawable/input_border"
                 android:ems="10"
-                android:hint="Email"
+                android:hint="Arrival"
                 android:inputType="textEmailAddress"
                 android:paddingLeft="20dp"
                 android:textColorHint="@color/white" />
 
             <EditText
-                android:id="@+id/etPassword"
+                android:id="@+id/etDepature"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
@@ -108,14 +89,14 @@
                 android:layout_marginRight="40dp"
                 android:background="@drawable/input_border"
                 android:ems="10"
-                android:hint="Password"
+                android:hint="Depature"
                 android:inputType="textPassword"
                 android:paddingLeft="20dp"
                 android:textColorHint="@color/white" />
 
 
             <EditText
-                android:id="@+id/etPhone"
+                android:id="@+id/etStoppage"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
@@ -124,60 +105,24 @@
                 android:layout_marginRight="40dp"
                 android:background="@drawable/input_border"
                 android:ems="10"
-                android:hint="Phone Number"
+                android:hint="Stoppage"
                 android:inputType="phone"
                 android:paddingLeft="20dp"
                 android:textColorHint="@color/white" />
 
-            <Spinner
-                android:id="@+id/typeop"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:drawableEnd="@drawable/ic_down_arrow_icon"
-                android:textColor="@color/white"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="40dp"
-                android:background="@drawable/input_border"
-                tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
-                android:id="@+id/btnSignup"
+                android:id="@+id/submitBTN"
                 android:layout_width="105dp"
                 android:layout_height="38dp"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
                 android:background="@drawable/signup_btn"
-                android:text="signup"
+                android:text="Submit"
                 android:clickable="true"
                 android:textColor="@color/white"
                 tools:ignore="TouchTargetSizeCheck" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center_horizontal">
-
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Already have an Account"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/etLogin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Login?"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
-            </LinearLayout>
 
             <ProgressBar
                 android:id="@+id/regProgressBar"
@@ -186,7 +131,6 @@
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

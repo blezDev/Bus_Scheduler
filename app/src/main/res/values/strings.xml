@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Bus Scheduler</string>
+    <string name="driver_dashboard">Driver Dashboard</string>
 </resources>
