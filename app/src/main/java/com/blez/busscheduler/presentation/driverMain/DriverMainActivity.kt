@@ -15,6 +15,7 @@ import com.blez.busscheduler.data.ScheduleList
 import com.blez.busscheduler.databinding.ActivityDriverMainBinding
 import com.blez.busscheduler.network.Retrofit
 import com.blez.busscheduler.presentation.entry.EntryActivity
+import com.blez.busscheduler.presentation.login.LoginActivity
 import com.blez.busscheduler.utils.TokenManager
 import retrofit2.Call
 import retrofit2.Callback
@@ -29,9 +30,16 @@ class DriverMainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_driver_main)
         tokenManager = TokenManager(applicationContext)
         binding.entryBTN.setOnClickListener {
-            val intent = Intent(this,EntryActivity::class.java)
+            val intent = Intent(this, EntryActivity::class.java)
             startActivity(intent)
         }
+        binding.btnLogout.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            tokenManager.deteleCredit()
+            startActivity(intent)
+            finish()
+        }
+
         val token = tokenManager.getToken()!!
         val email = tokenManager.getEmail()!!
         val retService = Retrofit.getRetrofitInstance().create(BusAPI::class.java)
