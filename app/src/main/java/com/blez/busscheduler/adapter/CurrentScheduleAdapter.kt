@@ -2,11 +2,13 @@ package com.blez.busscheduler.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.blez.busscheduler.data.CurrentBusDetails
 import com.blez.busscheduler.data.Data
 import com.blez.busscheduler.databinding.CurrentScheduleViewBinding
+import com.blez.busscheduler.utils.TokenManager
 
 class CurrentScheduleAdapter(val context : Context,val currentBusDetails: List<Data>) : RecyclerView.Adapter<CurrentScheduleAdapter.ItemView>() {
     private lateinit var binding: CurrentScheduleViewBinding

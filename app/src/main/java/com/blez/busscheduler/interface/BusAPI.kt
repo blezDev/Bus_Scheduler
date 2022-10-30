@@ -13,5 +13,8 @@ interface BusAPI {
     fun addSchedule(@Body info : EntryData) : retrofit2.Call<EntryDataSTATUS>
     @POST("/ShowSchedule")
      fun showSchedule(@Body auth : Auth) : retrofit2.Call<ScheduleList>
+     @POST("/DeleteSchedule")
+     fun deleteSchedule(@Body info : CurrentBusDetailsDelete) : retrofit2.Call<RegisterStatus>
+
 
 }

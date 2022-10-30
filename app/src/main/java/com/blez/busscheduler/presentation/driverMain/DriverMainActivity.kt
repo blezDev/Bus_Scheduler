@@ -11,6 +11,8 @@ import com.blez.busscheduler.R
 import com.blez.busscheduler.`interface`.BusAPI
 import com.blez.busscheduler.adapter.CurrentScheduleAdapter
 import com.blez.busscheduler.data.Auth
+import com.blez.busscheduler.data.CurrentBusDetailsDelete
+import com.blez.busscheduler.data.RegisterStatus
 import com.blez.busscheduler.data.ScheduleList
 import com.blez.busscheduler.databinding.ActivityDriverMainBinding
 import com.blez.busscheduler.network.Retrofit

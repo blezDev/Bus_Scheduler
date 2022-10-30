@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.blez.busscheduler.R
 import com.blez.busscheduler.`interface`.BusAPI
+import com.blez.busscheduler.data.CurrentBusDetails
 import com.blez.busscheduler.data.Register
 import com.blez.busscheduler.data.RegisterStatus
 import com.blez.busscheduler.databinding.ActivityRegisterBinding
@@ -24,6 +25,7 @@ import retrofit2.Response
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding : ActivityRegisterBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_register)
