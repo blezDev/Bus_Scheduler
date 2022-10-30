@@ -45,7 +45,7 @@
                 android:textColor="@color/white"
                 android:ems="10"
                 android:hint="Bus Number"
-                android:inputType="number"
+                android:inputType="text"
                 android:paddingLeft="20dp"
                 android:textColorHint="@color/white" />
 
@@ -65,21 +65,6 @@
                 android:textColorHint="@color/white" />
 
             <EditText
-                android:id="@+id/etArrival"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="20dp"
-                android:textColor="@color/white"
-                android:layout_marginRight="40dp"
-                android:background="@drawable/input_border"
-                android:ems="10"
-                android:hint="Arrival"
-                android:inputType="textEmailAddress"
-                android:paddingLeft="20dp"
-                android:textColorHint="@color/white" />
-
-            <EditText
                 android:id="@+id/etDepature"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -89,8 +74,8 @@
                 android:layout_marginRight="40dp"
                 android:background="@drawable/input_border"
                 android:ems="10"
-                android:hint="Depature"
-                android:inputType="textPassword"
+                android:hint="Depature (11 : 00 AM)"
+                android:inputType="text"
                 android:paddingLeft="20dp"
                 android:textColorHint="@color/white" />
 
@@ -106,7 +91,7 @@
                 android:background="@drawable/input_border"
                 android:ems="10"
                 android:hint="Stoppage"
-                android:inputType="phone"
+                android:inputType="text"
                 android:paddingLeft="20dp"
                 android:textColorHint="@color/white" />
 

@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.blez.busscheduler.data.CurrentBusDetails
+import com.blez.busscheduler.data.Data
 import com.blez.busscheduler.databinding.CurrentScheduleViewBinding
 
-class CurrentScheduleAdapter(val context : Context,val currentBusDetails: List<CurrentBusDetails>) : RecyclerView.Adapter<CurrentScheduleAdapter.ItemView>() {
+class CurrentScheduleAdapter(val context : Context,val currentBusDetails: List<Data>) : RecyclerView.Adapter<CurrentScheduleAdapter.ItemView>() {
     private lateinit var binding: CurrentScheduleViewBinding
     inner class ItemView(binding: CurrentScheduleViewBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -17,11 +18,15 @@ class CurrentScheduleAdapter(val context : Context,val currentBusDetails: List<C
     }
 
     override fun onBindViewHolder(holder: ItemView, position: Int) {
-     binding.busNoText.text = { /*TODO()*/}.toString()
-     binding.atText.text = { /*TODO()*/}.toString()
-     binding.arrivalText.text = { /*TODO()*/}.toString()
-     binding.depatureText.text = { /*TODO()*/}.toString()
-     binding.stoppageText.text = { /*TODO()*/}.toString()
+
+        val text =  ArrayList<String>()
+        currentBusDetails[position].Stoppage.forEach { text.add(it) }
+
+        binding.busNoText.text = currentBusDetails[position].BusNumber
+        binding.atText.text = currentBusDetails[position].Destination
+
+        binding.depatureText.text = currentBusDetails[position].Depature
+        binding.stoppageText.text = text.toString()
     }
 
     override fun getItemCount(): Int {
